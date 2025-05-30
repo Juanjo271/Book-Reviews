@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+<h1 class="mb-4">Añadir un nuevo libro</h1>
+<form action="/books" method="POST" class="needs-validation">
+  <div class="mb-3">
+    <label for="title" class="form-label">Título</label>
+    <input type="text" name="title" class="form-control" id="title" required>
+  </div>
+  <div class="mb-3">
+    <label for="rating" class="form-label">Calificación (1-10)</label>
+    <input type="number" name="rating" class="form-control" id="rating" min="1" max="10" required>
+  </div>
+    <div class="mb-3">
+    <label for="review" class="form-label">Review</label>
+    <input type="text" name="review" class="form-control" id="review" required>
+  </div>
+    <div class="mb-3">
+    <label for="isbn" class="form-label">ISBN</label>
+    <input type="number" name="isbn" class="form-control" id="isbn" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+<%- include('partials/footer') %>

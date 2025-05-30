@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<h1 class="mb-4">Libros Leídos</h1>
+<table class="table table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Portada</th>
+      <th>Título</th>
+      <th>Calificación</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% books.forEach(book => { %>
+      <tr>
+        <td>
+          <img src="https://covers.openlibrary.org/b/isbn/<%= book.isbn_code %>-S.jpg" alt="" class="img-thumbnail" style="width: 100px; height: auto;">
+        <td><%= book.book_name %></td>
+        <td><%= book.rating %> / 10</td>
+        <td>
+          <a href="/books/<%= book.id %>/edit" class="btn btn-warning btn-sm">Editar</a>
+          <form action="/books/<%= book.id %>" method="POST" class="d-inline">
+            <button class="btn btn-danger btn-sm">Eliminar</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+<%- include('partials/footer') %> 
+

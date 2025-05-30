@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<h1 class="mb-4">Editar libro</h1>
+<form action="/books/<%= book.id %>/edit" method="POST">
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Título</label>
+    <input type="text" name="title" class="form-control" id="updateTitle" value="<%= book.book_name %>" required>
+  </div>
+  <div class="mb-3">
+    <label for="rating" class="form-label">Calificación</label>
+    <input type="number" name="rating" class="form-control" id="updateRating" min="1" max="10" value="<%= book.rating %>" required>
+  </div>
+    <div class="mb-3">
+    <label for="review" class="form-label">Calificación</label>
+    <input type="text" name="review" class="form-control" id="updateReview" value="<%= book.review %>" required>
+  </div>
+  <button type="submit" class="btn btn-success">Actualizar</button>
+</form>
+
+<%- include('partials/footer') %>
