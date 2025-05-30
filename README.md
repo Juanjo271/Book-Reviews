@@ -28,6 +28,7 @@ Una aplicación web simple para registrar, editar y eliminar reseñas de libros.
 ### 1. Clonar el repositorio
 
 https://github.com/Juanjo271/Book-Reviews.git
+
 cd book-reviews-app
 
 ### 2. Instalar dependencias
